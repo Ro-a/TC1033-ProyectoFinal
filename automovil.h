@@ -19,22 +19,20 @@ public:
 };
 
 class Velocidad {
-private:
-    int valorActual;
-
 public:
+    int valorActual;
     Velocidad();
     void aumentar();
     void disminuir();
 };
 
 class Gasolina {
-private:
-    float nivelActual;
-    const float capacidadMaxima;
-
 public:
+    const float capacidadMaxima;
+    float nivelActual;
     Gasolina();
+    Gasolina(const Gasolina& other); 
+    Gasolina& operator=(const Gasolina& other); 
     void disminuir(float cantidad);
     void llenar(float cantidad);
 };
@@ -50,10 +48,8 @@ public:
 };
 
 class Luces {
-private:
-    bool estado;
-
 public:
+    bool estado;
     Luces();
     void prender();
     void apagar();
@@ -81,6 +77,7 @@ private:
     int velocidad;
     float gasolina;
     bool luces;
+    Llanta llantas[NUM_LLANTAS];
     Tablero tablero;
 
 public:

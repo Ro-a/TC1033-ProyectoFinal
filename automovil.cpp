@@ -35,6 +35,21 @@ Gasolina::Gasolina() : capacidadMaxima(42.0) {
     nivelActual = capacidadMaxima;
 }
 
+Gasolina::Gasolina(const Gasolina& other) : capacidadMaxima(other.capacidadMaxima) {
+    nivelActual = other.nivelActual;
+}
+
+Gasolina& Gasolina::operator=(const Gasolina& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    nivelActual = other.nivelActual;
+    // capacidadMaxima es constante, no necesita ser asignada
+
+    return *this;
+}
+
 void Gasolina::disminuir(float cantidad) {
     if (cantidad <= nivelActual && cantidad >= 0)
         nivelActual -= cantidad;
