@@ -1,5 +1,5 @@
 /*
-Rodrigo Niembro Aguilar a01378695
+Rodrigo Niembro Aguilar a01378695 ITD
 */
 
 #ifndef AUTOMOVIL_H

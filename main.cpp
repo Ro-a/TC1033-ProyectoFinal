@@ -1,11 +1,13 @@
 /*
-Autor: Rodrigo Niembro Aguilar
+Autor: Rodrigo Niembro Aguilar A01378695 ITD
 */
 
 #include "automovil.h"
 #include <iostream>
 
 int main() {
+    std::cout << "Autor: Rodrigo Niembro Aguilar, A01378695, (ITD)" << std::endl;
+
     Automovil automovil;
 
     automovil.mostrarTablero(); // Mostrar el tablero inicial
